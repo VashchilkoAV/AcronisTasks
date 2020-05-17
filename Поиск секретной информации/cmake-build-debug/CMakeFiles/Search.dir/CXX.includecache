@@ -1,0 +1,30 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/alexander/computer_science/AcronisTasks/Поиск секретной информации/KMP.h
+vector
+-
+string
+-
+iostream
+-
+sstream
+-
+fstream
+-
+string.h
+-
+filesystem
+-
+
+/home/alexander/computer_science/AcronisTasks/Поиск секретной информации/main.cpp
+iostream
+-
+KMP.h
+/home/alexander/computer_science/AcronisTasks/Поиск секретной информации/KMP.h
+

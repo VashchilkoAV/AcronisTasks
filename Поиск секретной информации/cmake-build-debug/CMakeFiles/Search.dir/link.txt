@@ -1,0 +1,1 @@
+/usr/bin/c++  -g   CMakeFiles/Search.dir/main.cpp.o CMakeFiles/Search.dir/KMP.cpp.o  -o Search 
