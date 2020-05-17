@@ -1,0 +1,1 @@
+/usr/bin/cc -fPIC -g  -shared -Wl,-soname,liblibpng.so -o liblibpng.so CMakeFiles/libpng.dir/main.c.o 

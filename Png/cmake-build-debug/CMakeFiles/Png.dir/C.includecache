@@ -1,0 +1,22 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/alexander/computer_science/AcronisTasks/Png/main.c
+unistd.h
+-
+stdlib.h
+-
+stdio.h
+-
+string.h
+-
+stdarg.h
+-
+png.h
+-
+
