@@ -215,15 +215,16 @@ RValue WriteBit(RValue curr, int bit, FILE* output) { //returns current char
         }
         return curr;
     }
-    RValue result;
-    result.currPos = (curr.currPos - 1 < 0) ? 7 : curr.currPos-1;
-    result.currChar = curr.currPos;
+    RValue result;    
     int add = 1 << curr.currPos;
+    result.currPos = (curr.currPos - 1 < 0) ? 7 : curr.currPos-1;
+    result.currChar = curr.currChar;
     if (bit == 1) {
         result.currChar |= add;
     }
     if (curr.currPos == 0) {
         fputc(result.currChar, output);
+        result.currPos = 7;
         result.currChar = 0;
     }
     return result;
@@ -296,12 +297,13 @@ void DeleteNode(Node *node) {
 }
 
 void ProcessDecomression(FILE *input, FILE *output, List *list){
-    int ch = 0, pos = 0;
+    int ch = 0;
+    int pos = 0;
     Node * ptr = list->Head;
     if (ptr) {
-        while((ch = fgetc(input) != EOF)) {
-            unsigned curr = 1;
+        while((ch = fgetc(input)) != EOF) {
             for (pos = 0; pos < 8; pos++) {
+                unsigned curr = 1;
                 curr <<= (7-pos);
                 int res = ch & curr;
                 if (res) { //left
