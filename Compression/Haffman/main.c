@@ -21,5 +21,5 @@ int main(int argc, char** argv) {
 //            }
 //        }
 //    }
-    Compress("test.txt", "a");
+    Compress("test.txt", "output.txt");
 }
