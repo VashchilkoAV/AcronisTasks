@@ -41,7 +41,7 @@ int Compress(char *filename, char *resultFilename) {
         return 2;
     }
     fwrite(frequences, 4, 256, output);
-    //PrintTree(list);
+    PrintTree(list);
     //PrintList(list);
 
     rewind(input);
@@ -127,6 +127,9 @@ void MakeTree(List *list) {
             //PrintList(list);
         }
         if (list->Size == 1) {
+            Node* newNode = (Node*)malloc(sizeof (Node));
+            newNode->left = list->Head;
+            list->Head = newNode;
             return;
         } else {
             list->Size--;
@@ -210,12 +213,12 @@ RValue WriteChar(char* symbol, RValue curr, FILE* output) {
 
 RValue WriteBit(RValue curr, int bit, FILE* output) { //returns current char
     if (bit == -1) {
-        if (curr.currPos != 7) {
+        if (curr.currPos != 0) {
             int i = 0;
-            for (; i < curr.currPos+1; i++) {
-                unsigned add = 1;
-                add <<= i;
-                curr.currChar |= add;
+            for (; i < curr.currPos; i++) {
+                unsigned d = 1;
+                d <<= i;
+                curr.currChar |= d;
             }
             fputc(curr.currChar, output);
         }
