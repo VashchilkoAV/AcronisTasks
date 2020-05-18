@@ -1,0 +1,5 @@
+arguments can be provided in any order:
+-n -- non-recursive, as default recursive mod is set.
+-t<value> -- num of threads, as default value == 1.
+path -- start path of the search. Must be absolute.
+string -- the string to search.

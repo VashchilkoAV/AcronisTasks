@@ -55,6 +55,15 @@ int Compress(char *filename, char *resultFilename) {
     }
     WriteChar("", result, output);
     fclose(output);
+    fclose(input);
+
+    DeleteList(list);
+    free(list);
+    for (i = 0; i < 256; i++) {
+        free(codes[i]);
+    }
+    free(codes);
+
     return 0;
 }
 
@@ -218,4 +227,104 @@ RValue WriteBit(RValue curr, int bit, FILE* output) { //returns current char
         result.currChar = 0;
     }
     return result;
+}
+
+int Decompress(char *filename, char *resultFilename) {
+    int frequences[256] = {0};
+    FILE * input = fopen(filename, "rb");
+    List * list = (List*)malloc(sizeof (list));
+    if (input == NULL) {
+        return 1;
+    }
+
+    FILE* output = fopen(resultFilename, "wb");
+    if (output == NULL) {
+        return 2;
+    }
+
+    fread(frequences, 4, 256, input);
+
+    list->Size = 0;
+    MakeList(frequences, list);
+    PrintList(list);
+    MakeTree(list);
+//    char ** codes = (char**)malloc(256*sizeof (char*));
+//    MakeCodes(list, codes);
+//    int i = 0;
+//    for (; i < 256; i++) {
+//        if (codes[i] != NULL) {
+//            printf("%s\n", codes[i]);
+//        }
+//    }
+
+    ProcessDecomression(input, output, list);
+
+
+    fclose(input);
+    fclose(output);
+    DeleteList(list);
+    free(list);
+
+    return 0;
+}
+
+void DeleteList(List *list) {
+    if (list->Head) {
+        if (list->Head->left || list->Head->right) {
+            DeleteNode(list->Head);
+        } else {
+            free(list->Head);
+        }
+    }
+}
+
+void DeleteNode(Node *node) {
+    if (node->left) {
+        if (node->left->left || node->left->right) {
+            DeleteNode(node->left);
+        } else {
+            free(node->left);
+        }
+    }
+    if (node->right) {
+        if (node->right->left || node->right->right) {
+            DeleteNode(node->right);
+        } else {
+            free(node->right);
+        }
+    }
+}
+
+void ProcessDecomression(FILE *input, FILE *output, List *list){
+    int ch = 0, pos = 0;
+    Node * ptr = list->Head;
+    if (ptr) {
+        while((ch = fgetc(input) != EOF)) {
+            unsigned curr = 1;
+            for (pos = 0; pos < 8; pos++) {
+                curr <<= (7-pos);
+                int res = ch & curr;
+                if (res) { //left
+                    if (ptr->left) {
+                        ptr = ptr->left;
+                        if (ptr->left == NULL && ptr->right == NULL) {//means that ptr is a symbol
+                            fputc(ptr->Char, output);
+                            ptr = list->Head;
+                        }
+                    }
+                } else {
+                    if (ptr->right) {
+                        ptr = ptr->right;
+                        if (ptr->left == NULL && ptr->right == NULL) {//means that ptr is a symbol
+                            fputc(ptr->Char, output);
+                            ptr = list->Head;
+                        }
+                    }
+                }
+
+            }
+
+        }
+
+    }
 }

@@ -1,0 +1,1 @@
+/usr/bin/c++   -lstdc++fs -std=c++1z -pthread -g   CMakeFiles/multithread_search.dir/main.cpp.o CMakeFiles/multithread_search.dir/KMP.cpp.o CMakeFiles/multithread_search.dir/file_manager.cpp.o CMakeFiles/multithread_search.dir/threads_manager.cpp.o  -o multithread_search 

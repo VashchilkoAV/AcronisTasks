@@ -51,3 +51,8 @@ RValue WriteChar(char* symbol, RValue curr, FILE* output);
 
 RValue WriteBit(RValue curr, int bit, FILE* output);
 
+void DeleteList(List* list);
+
+void DeleteNode(Node* node);
+
+void ProcessDecomression(FILE* input, FILE* output, List* list);
