@@ -211,6 +211,12 @@ RValue WriteChar(char* symbol, RValue curr, FILE* output) {
 RValue WriteBit(RValue curr, int bit, FILE* output) { //returns current char
     if (bit == -1) {
         if (curr.currPos != 7) {
+            int i = 0;
+            for (; i < curr.currPos+1; i++) {
+                unsigned add = 1;
+                add <<= i;
+                curr.currChar |= add;
+            }
             fputc(curr.currChar, output);
         }
         return curr;
