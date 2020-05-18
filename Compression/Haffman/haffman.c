@@ -188,7 +188,7 @@ void MakeCode(Node *node, char **codes, int length, char * curr) {
 
 RValue WriteChar(char* symbol, RValue curr, FILE* output) {
     RValue result = curr;
-    if (strcmp(symbol, "")) {//if end of string
+    if (strcmp(symbol, "") == 0) {//if end of string
         WriteBit(result, -1, output);
     } else {
         int i = 0;
