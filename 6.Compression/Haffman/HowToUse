@@ -1,0 +1,4 @@
+Arguments must be provided in a following order:
+flag: -c -- compress, -d -- decompress
+source filename
+destination filename
