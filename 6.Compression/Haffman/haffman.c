@@ -115,6 +115,12 @@ void PrintList(List *list) {
 
 void MakeTree(List *list) {
     if (list->Head) {
+        if (list->Size == 1) {
+            Node* newNode = (Node*)malloc(sizeof (Node));
+            newNode->left = list->Head;
+            list->Head = newNode;
+            return;
+        }
         while (list->Size > 2) {
             list->Size-=2;
             Node * TwoLast = list->Head;
@@ -125,19 +131,15 @@ void MakeTree(List *list) {
             int Freq = left->Freq+right->Freq;
             ListInsert(Char, Freq, right, left, list);
             //PrintList(list);
-        }
-        if (list->Size == 1) {
-            return;
-        } else {
-            list->Size--;
-            Node * TwoLast = list->Head;
-            Node * right = TwoLast; //less
-            Node * left = TwoLast->next;
-            int Char = -1;
-            int Freq = left->Freq+right->Freq;
-            list->Head = NULL;
-            ListInsert(Char, Freq, right, left, list);
-        }
+        }        
+        list->Size--;
+        Node * TwoLast = list->Head;
+        Node * right = TwoLast; //less
+        Node * left = TwoLast->next;
+        int Char = -1;
+        int Freq = left->Freq+right->Freq;
+        list->Head = NULL;
+        ListInsert(Char, Freq, right, left, list);
     }
 }
 
