@@ -4,8 +4,8 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/alexander/computer_science/AcronisTasks/Поиск секретной информации/KMP.cpp" "/home/alexander/computer_science/AcronisTasks/Поиск секретной информации/cmake-build-debug/CMakeFiles/Search.dir/KMP.cpp.o"
-  "/home/alexander/computer_science/AcronisTasks/Поиск секретной информации/main.cpp" "/home/alexander/computer_science/AcronisTasks/Поиск секретной информации/cmake-build-debug/CMakeFiles/Search.dir/main.cpp.o"
+  "/home/alexander/computer_science/AcronisTasks/4.SecretInformation/Simple/KMP.cpp" "/home/alexander/computer_science/AcronisTasks/4.SecretInformation/Simple/cmake-build-debug/CMakeFiles/Search.dir/KMP.cpp.o"
+  "/home/alexander/computer_science/AcronisTasks/4.SecretInformation/Simple/main.cpp" "/home/alexander/computer_science/AcronisTasks/4.SecretInformation/Simple/cmake-build-debug/CMakeFiles/Search.dir/main.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

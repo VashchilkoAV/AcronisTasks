@@ -43,10 +43,10 @@ RM = /home/alexander/computer_science/IDEs/apps/CLion/ch-0/201.7223.86/bin/cmake
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = "/home/alexander/computer_science/AcronisTasks/Поиск секретной информации"
+CMAKE_SOURCE_DIR = /home/alexander/computer_science/AcronisTasks/4.SecretInformation/Simple
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = "/home/alexander/computer_science/AcronisTasks/Поиск секретной информации/cmake-build-debug"
+CMAKE_BINARY_DIR = /home/alexander/computer_science/AcronisTasks/4.SecretInformation/Simple/cmake-build-debug
 
 # Include any dependencies generated for this target.
 include CMakeFiles/Search.dir/depend.make
@@ -59,29 +59,29 @@ include CMakeFiles/Search.dir/flags.make
 
 CMakeFiles/Search.dir/main.cpp.o: CMakeFiles/Search.dir/flags.make
 CMakeFiles/Search.dir/main.cpp.o: ../main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/alexander/computer_science/AcronisTasks/Поиск секретной информации/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/Search.dir/main.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Search.dir/main.cpp.o -c "/home/alexander/computer_science/AcronisTasks/Поиск секретной информации/main.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/alexander/computer_science/AcronisTasks/4.SecretInformation/Simple/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/Search.dir/main.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Search.dir/main.cpp.o -c /home/alexander/computer_science/AcronisTasks/4.SecretInformation/Simple/main.cpp
 
 CMakeFiles/Search.dir/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Search.dir/main.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/alexander/computer_science/AcronisTasks/Поиск секретной информации/main.cpp" > CMakeFiles/Search.dir/main.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/alexander/computer_science/AcronisTasks/4.SecretInformation/Simple/main.cpp > CMakeFiles/Search.dir/main.cpp.i
 
 CMakeFiles/Search.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Search.dir/main.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/alexander/computer_science/AcronisTasks/Поиск секретной информации/main.cpp" -o CMakeFiles/Search.dir/main.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/alexander/computer_science/AcronisTasks/4.SecretInformation/Simple/main.cpp -o CMakeFiles/Search.dir/main.cpp.s
 
 CMakeFiles/Search.dir/KMP.cpp.o: CMakeFiles/Search.dir/flags.make
 CMakeFiles/Search.dir/KMP.cpp.o: ../KMP.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/alexander/computer_science/AcronisTasks/Поиск секретной информации/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/Search.dir/KMP.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Search.dir/KMP.cpp.o -c "/home/alexander/computer_science/AcronisTasks/Поиск секретной информации/KMP.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/alexander/computer_science/AcronisTasks/4.SecretInformation/Simple/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/Search.dir/KMP.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Search.dir/KMP.cpp.o -c /home/alexander/computer_science/AcronisTasks/4.SecretInformation/Simple/KMP.cpp
 
 CMakeFiles/Search.dir/KMP.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Search.dir/KMP.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/alexander/computer_science/AcronisTasks/Поиск секретной информации/KMP.cpp" > CMakeFiles/Search.dir/KMP.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/alexander/computer_science/AcronisTasks/4.SecretInformation/Simple/KMP.cpp > CMakeFiles/Search.dir/KMP.cpp.i
 
 CMakeFiles/Search.dir/KMP.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Search.dir/KMP.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/alexander/computer_science/AcronisTasks/Поиск секретной информации/KMP.cpp" -o CMakeFiles/Search.dir/KMP.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/alexander/computer_science/AcronisTasks/4.SecretInformation/Simple/KMP.cpp -o CMakeFiles/Search.dir/KMP.cpp.s
 
 # Object files for target Search
 Search_OBJECTS = \
@@ -95,7 +95,7 @@ Search: CMakeFiles/Search.dir/main.cpp.o
 Search: CMakeFiles/Search.dir/KMP.cpp.o
 Search: CMakeFiles/Search.dir/build.make
 Search: CMakeFiles/Search.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="/home/alexander/computer_science/AcronisTasks/Поиск секретной информации/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable Search"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/alexander/computer_science/AcronisTasks/4.SecretInformation/Simple/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable Search"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/Search.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -108,6 +108,6 @@ CMakeFiles/Search.dir/clean:
 .PHONY : CMakeFiles/Search.dir/clean
 
 CMakeFiles/Search.dir/depend:
-	cd "/home/alexander/computer_science/AcronisTasks/Поиск секретной информации/cmake-build-debug" && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" "/home/alexander/computer_science/AcronisTasks/Поиск секретной информации" "/home/alexander/computer_science/AcronisTasks/Поиск секретной информации" "/home/alexander/computer_science/AcronisTasks/Поиск секретной информации/cmake-build-debug" "/home/alexander/computer_science/AcronisTasks/Поиск секретной информации/cmake-build-debug" "/home/alexander/computer_science/AcronisTasks/Поиск секретной информации/cmake-build-debug/CMakeFiles/Search.dir/DependInfo.cmake" --color=$(COLOR)
+	cd /home/alexander/computer_science/AcronisTasks/4.SecretInformation/Simple/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/alexander/computer_science/AcronisTasks/4.SecretInformation/Simple /home/alexander/computer_science/AcronisTasks/4.SecretInformation/Simple /home/alexander/computer_science/AcronisTasks/4.SecretInformation/Simple/cmake-build-debug /home/alexander/computer_science/AcronisTasks/4.SecretInformation/Simple/cmake-build-debug /home/alexander/computer_science/AcronisTasks/4.SecretInformation/Simple/cmake-build-debug/CMakeFiles/Search.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/Search.dir/depend
 
